@@ -9,9 +9,9 @@ appVersion: "0.0.0"
 keywords:
   - oxide
   - cloud-controller-manager
-home: "https://github.com/oxidecomputer/oxide-cloud-controller-manager"
+home: "https://github.com/bwagner5/oxccm"
 sources:
-  - "https://github.com/oxidecomputer/oxide-cloud-controller-manager"
+  - "https://github.com/bwagner5/oxccm"
 maintainers:
   - name: Oxide Computer Company
     email: support@oxide.computer
