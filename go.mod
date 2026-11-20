@@ -1,4 +1,4 @@
-module github.com/oxidecomputer/oxide-cloud-controller-manager
+module github.com/bwagner5/oxccm
 
 go 1.27.3
 

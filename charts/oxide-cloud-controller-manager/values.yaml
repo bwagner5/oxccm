@@ -12,7 +12,7 @@ kubeconfig:
 additionalLabels: {}
 
 image:
-  repository: ghcr.io/oxidecomputer/oxide-cloud-controller-manager
+  repository: ghcr.io/bwagner5/oxccm
   pullPolicy: IfNotPresent
   # Uses Chart.yaml's `appVersion` when empty.
   tag: ""

@@ -3,15 +3,15 @@ VERSION ?= $(shell git describe --tags --dirty 2>/dev/null || echo v0.0.0-dev)
 CONTAINER_RUNTIME ?= $(shell command -v podman 2>/dev/null || command -v docker 2>/dev/null)
 
 # Container image configuration.
-IMAGE_REGISTRY ?= ghcr.io/oxidecomputer
-IMAGE_NAME ?= oxide-cloud-controller-manager
+IMAGE_REGISTRY ?= ghcr.io/bwagner5
+IMAGE_NAME ?= oxccm
 IMAGE_TAG ?= $(patsubst v%,%,$(VERSION))
 IMAGE_FULL ?= $(if $(IMAGE_REGISTRY),$(IMAGE_REGISTRY)/)$(IMAGE_NAME):$(IMAGE_TAG)
 export KO_DEFAULTBASEIMAGE ?= gcr.io/distroless/static-debian13:nonroot
 
 # Helm chart configuration.
 HELM_CHART_DIR ?= charts/oxide-cloud-controller-manager
-HELM_CHART_REGISTRY ?= oci://ghcr.io/oxidecomputer/helm-charts
+HELM_CHART_REGISTRY ?= oci://ghcr.io/bwagner5/helm-charts
 HELM ?= go tool -modfile tools/go.mod helm
 ARTIFACTS ?= _artifacts
 GORELEASER ?= go tool -modfile tools/go.mod goreleaser
