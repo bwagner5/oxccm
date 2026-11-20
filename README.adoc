@@ -63,7 +63,7 @@ Install the Helm chart.
 [source,shell]
 ----
 helm install <RELEASE_NAME> \
-  oci://ghcr.io/oxidecomputer/helm-charts/oxide-cloud-controller-manager \
+  oci://ghcr.io/bwagner5/helm-charts/oxide-cloud-controller-manager \
   --version X.Y.Z \
   --namespace kube-system \
   --create-namespace
@@ -88,7 +88,7 @@ link:charts/oxide-cloud-controller-manager[charts/oxide-cloud-controller-manager
 
 [source,shell]
 ----
-kubectl apply -f https://github.com/oxidecomputer/oxide-cloud-controller-manager/releases/latest/download/oxide-cloud-controller-manager.yaml
+kubectl apply -f https://github.com/bwagner5/oxccm/releases/latest/download/oxide-cloud-controller-manager.yaml
 ----
 
 == Development
@@ -122,7 +122,7 @@ podman run \
 	--env OXIDE_TOKEN \
 	--env OXIDE_PROJECT \
 	--volume ./kubeconfig.yaml:/tmp/kubeconfig.yaml:ro \
-	ghcr.io/oxidecomputer/oxide-cloud-controller-manager:TAG \
+	ghcr.io/bwagner5/oxccm:TAG \
 	--cloud-provider oxide \
 	--kubeconfig /tmp/kubeconfig.yaml
 ----

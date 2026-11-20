@@ -25,7 +25,7 @@ builds:
 kos:
   - build: oxide-cloud-controller-manager
     repositories:
-      - ghcr.io/oxidecomputer/oxide-cloud-controller-manager
+      - ghcr.io/bwagner5/oxccm
     platforms:
       - linux/amd64
       - linux/arm64
@@ -33,7 +33,7 @@ kos:
       - "{{ .Version }}"
     annotations:
       org.opencontainers.image.description: Oxide Cloud Controller Manager
-      org.opencontainers.image.source: https://github.com/oxidecomputer/oxide-cloud-controller-manager
+      org.opencontainers.image.source: https://github.com/bwagner5/oxccm
     bare: true
     preserve_import_paths: false
     creation_time: "{{ .CommitTimestamp }}"
@@ -50,8 +50,8 @@ changelog:
 
 release:
   github:
-    owner: oxidecomputer
-    name: oxide-cloud-controller-manager
+    owner: bwagner5
+    name: oxccm
   # Abort if the tag already has an immutable release or no permissions.
   preflight:
     fail_on_error: true
